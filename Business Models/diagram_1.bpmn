@@ -1,0 +1,47 @@
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class VerifyLeaveTask implements JavaDelegate {
+    public void execute(DelegateExecution execution) throws Exception {
+        int daysRequested = (int) execution.getVariable("daysRequested");
+        String leaveType = (String) execution.getVariable("leaveType");
+        String supervisor = (String) execution.getVariable("supervisor");
+
+        boolean approved = false;
+        String reason = "";
+
+        // Verify leave request
+        if (leaveType.equals("Vacation")) {
+            if (daysRequested <= 10) {
+                approved = true;
+            } else {
+                reason = "Vacation requests cannot exceed 10 days";
+            }
+        } else if (leaveType.equals("Sick")) {
+            if (daysRequested <= 5) {
+                approved = true;
+            } else {
+                reason = "Sick leave requests cannot exceed 5 days";
+            }
+        } else if (leaveType.equals("Personal")) {
+            if (daysRequested <= 2) {
+                approved = true;
+            } else {
+                reason = "Personal leave requests cannot exceed 2 days";
+            }
+        } else {
+            reason = "Invalid leave type";
+        }
+
+        if (approved) {
+            // Send email to supervisor
+            // ...
+            System.out.println("Leave request approved by " + supervisor);
+        } else {
+            // Send email to employee
+            // ...
+            System.out.println("Leave request denied: " + reason);
+        }
+    }
+}
+<serviceTask id="verifyLeaveTask" name="Verify Leave" camunda:class="com.example.VerifyLeaveTask" />
