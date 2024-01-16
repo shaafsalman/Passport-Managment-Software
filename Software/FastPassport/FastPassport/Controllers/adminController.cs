@@ -179,5 +179,45 @@ namespace FastPassport.Controller
 
             return totalCost;
         }
+
+
+        public bool UploadApplicantImage(string applicantID, Image image)
+        {
+            try
+            {
+                byte[] imageData = ImageToByteArray(image);
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string updateQuery = "UPDATE Applicant SET Photo = @Photo WHERE ApplicantID = @ApplicantID";
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@Photo", imageData);
+                        command.Parameters.AddWithValue("@ApplicantID", applicantID);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception as needed
+                Console.WriteLine("Error uploading image: " + ex.Message);
+                return false;
+            }
+        }
+
+        private byte[] ImageToByteArray(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
     }
+
+
 }

@@ -13,6 +13,9 @@
     <Compile Update="Forms\ApplyforLostPassport.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ChildPassportPortalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\editInfo.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -304,7 +304,7 @@ namespace FastPassport.Forms
             // If the applicant clicks "Pay", update the payment status in the database
             if (result == DialogResult.OK)
             {
-                controller.UpdatePaymentStatus(bayform,true);
+                controller.UpdatePaymentStatus(bayform, true);
 
                 // Display success message
                 MessageBox.Show("Your passport application has been submitted successfully. Thank you!");
