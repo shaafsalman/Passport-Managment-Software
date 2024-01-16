@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastPassport")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb9eeb28fb481606be29ef6cec1a21483e044451")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60334f23f218af2b27d6446dfc0b3eb12275a3f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastPassport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastPassport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

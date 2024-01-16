@@ -96,6 +96,56 @@ namespace FastPassport.Controller
     }
 
 
+        public string InsertChildApplicant(string bayform, string name, string address, string phone, string email,
+            DateTime dob, string gender, string fatherName, string motherName, string fatherCNIC, string motherCNIC,
+            int pages, int validityPeriod, bool urgent)
+        {
+            string passportID = GeneratePassportNumber();
+
+            string type = "normal";
+            if (urgent)
+            {
+                type = "urgent";
+            }
+
+            string insertQuery = "INSERT INTO Applicant (ApplicantID, Name, Address, Phone, Email, DateOfBirth, Gender, IsChild, FatherName, MothersName, FatherID, MotherID) " +
+                "VALUES (@ApplicantID, @Name, @Address, @Phone, @Email, @DateOfBirth, @Gender, @IsChild, @FatherName, @MothersName, @FatherID, @MotherID)";
+
+            SqlCommand command = new SqlCommand(insertQuery, connection);
+            command.Parameters.AddWithValue("@ApplicantID", bayform);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@DateOfBirth", dob);
+            command.Parameters.AddWithValue("@Gender", gender);
+            command.Parameters.AddWithValue("@IsChild", true);
+            command.Parameters.AddWithValue("@FatherName", fatherName);
+            command.Parameters.AddWithValue("@MothersName", motherName);
+            command.Parameters.AddWithValue("@FatherID", fatherCNIC);
+            command.Parameters.AddWithValue("@MotherID", motherCNIC);
+            
+            connection.Open();
+            command.ExecuteNonQuery();
+            // Insert the new applicant's data into the PassportType table
+            string insertPassportTypeQuery = @"
+        INSERT INTO PassportType (PassportTypeID, ApplicantID, Type, ValidityPeriod, Pages)
+        VALUES (@PassportTypeID, @ApplicantID, @Type, @ValidityPeriod, @Pages)";
+
+            SqlCommand passportTypeCommand = new SqlCommand(insertPassportTypeQuery, connection);
+            passportTypeCommand.Parameters.AddWithValue("@PassportTypeID", GeneratePassportNumber());
+            passportTypeCommand.Parameters.AddWithValue("@ApplicantID", bayform);
+            passportTypeCommand.Parameters.AddWithValue("@Type", type);
+            passportTypeCommand.Parameters.AddWithValue("@ValidityPeriod", validityPeriod);
+            passportTypeCommand.Parameters.AddWithValue("@Pages", pages);
+
+            passportTypeCommand.ExecuteNonQuery();
+
+
+            connection.Close();
+
+            return passportID;
+        }
         public void UpdatePaymentStatus(string CNIC, bool status)
         {
             string updateQuery = "UPDATE Applicant SET PaymentStatus = @PaymentStatus WHERE ApplicantID = @ApplicantID";
