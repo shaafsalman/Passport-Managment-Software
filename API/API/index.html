@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Passport Audit Application Form</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+    </head>
+    <body>
+        <h1>New Passport Audit Application Form</h1>
+        <form id="application-form">   
+        <div class="form-container">
+                <div class="section">
+                    <label for="cnic">CNIC:</label><br>
+                    <input type="text" id="cnic" name="cnic"><br>
+                    <label for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName"><br>
+                    <label for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="phoneNumber">Phone Number:</label><br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+                </div>
+                <div class="section">
+                    <p>Page Count:</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="36pages" name="pageCounts" value="36">
+                        <label for="36pages">36</label><br>
+                        <input type="checkbox" id="72pages" name="pageCounts" value="72">
+                        <label for="72pages">72</label><br>
+                        <input type="checkbox" id="100pages" name="pageCounts" value="100">
+                        <label for="100pages">100</label><br>
+                    </div>
+                    <p>Gender:</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="male" name="gender" value="Male">
+                        <label for="male">Male</label><br>
+                        <input type="checkbox" id="female" name="gender" value="Female">
+                        <label for="female">Female</label><br>
+                    </div>
+                    <p>Type:</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="regular" name="type" value="Regular">
+                        <label for="regular">Regular</label><br>
+                        <input type="checkbox" id="urgent" name="type" value="Urgent">
+                        <label for="urgent">Urgent</label><br>
+                    </div>
+                    <p>Duration:</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="5years" name="duration" value="5">
+                        <label for="5years">5 Years</label><br>
+                        <input type="checkbox" id="10years" name="duration" value="10">
+                        <label for="10years">10 Years</label><br>
+                    </div>
+                </div> <!-- End of right side checkboxes -->
+                
+            </div> <!-- End of form-container -->
+            <div class="full-width">
+                <label for="homeAddress">Home Address:</label><br>
+                <input type="text" id="homeAddress" name="homeAddress" style="width: 90%;"><br>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" style="width: 90%"><br>
+            </div>
+            <!-- Address and DOB fields -->
+           
+
+            <!-- Submit button -->
+            <button type="submit" formaction="appointment.html" class="appointment">Apply for Appointment</button>
+
+        </form>
+        <script src="script.js">
+        </script>
+
+    </body>
+</html>

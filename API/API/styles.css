@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.section {
+    flex-basis: 45%;
+}
+.full-width {
+    flex-basis: 80%;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+label {
+    color: #333;
+    margin-top: 10px;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.appointment{
+    margin-top: 20px;
+    margin-left: 400px;
+    color:#fff;
+    box-align: center;
+    width: 40%;
+    height: 60px;
+    background: #2dab5d;
+    box-shadow: 0px 0px 15px 0px rgba(152, 236, 166, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    border-color: #fdfdfd;
+    font-size: 18px;
+}
+.appointment:hover {
+    cursor: pointer;
+  }
+  

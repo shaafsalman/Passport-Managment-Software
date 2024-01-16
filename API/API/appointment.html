@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        #appointmentDetails {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Appointment Details</h1>
+    <p id="appointmentDetails"></p>
+
+    <script>
+        // Get current date and time
+        var currentDate = new Date();
+        // Add 5 days to current date for appointment date
+        var appointmentDate = new Date();
+        appointmentDate.setDate(currentDate.getDate() + 5);
+        // Format date as MM/DD/YYYY
+        var formattedDate = (appointmentDate.getMonth() + 1) + '/' + appointmentDate.getDate() + '/' + appointmentDate.getFullYear();
+        // Set appointment time to 10:00 AM
+        var appointmentTime = "10:00 AM";
+
+        // Display appointment date and time
+        document.getElementById("appointmentDetails").innerHTML = "Your appointment is scheduled for " + formattedDate + " at " + appointmentTime;
+    </script>
+</body>
+</html>

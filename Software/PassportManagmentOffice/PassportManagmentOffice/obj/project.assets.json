@@ -470,23 +470,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ShaafSalman\\.nuget\\packages\\": {},
+    "C:\\Users\\ishaa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ShaafSalman\\Desktop\\PassPort Management Office\\Software\\PassportManagmentOffice\\PassportManagmentOffice\\PassportManagmentOffice.csproj",
+      "projectUniqueName": "C:\\Users\\ishaa\\source\\repos\\PassportManagmentOffice\\PassportManagmentOffice\\PassportManagmentOffice.csproj",
       "projectName": "PassportManagmentOffice",
-      "projectPath": "C:\\Users\\ShaafSalman\\Desktop\\PassPort Management Office\\Software\\PassportManagmentOffice\\PassportManagmentOffice\\PassportManagmentOffice.csproj",
-      "packagesPath": "C:\\Users\\ShaafSalman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ShaafSalman\\Desktop\\PassPort Management Office\\Software\\PassportManagmentOffice\\PassportManagmentOffice\\obj\\",
+      "projectPath": "C:\\Users\\ishaa\\source\\repos\\PassportManagmentOffice\\PassportManagmentOffice\\PassportManagmentOffice.csproj",
+      "packagesPath": "C:\\Users\\ishaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ishaa\\source\\repos\\PassportManagmentOffice\\PassportManagmentOffice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ShaafSalman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ishaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -538,7 +538,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
