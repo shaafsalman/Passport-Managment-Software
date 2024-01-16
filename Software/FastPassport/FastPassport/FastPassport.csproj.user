@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\AdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AdultPassportPortalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ApplicantDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ApplyforLostPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ChildPassportPortalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\editInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProcessAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\RenewPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\SighnUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UploadPictureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ViewApplicantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ViewApplicationStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ViewAppointmentCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ViewCargoProgressForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
